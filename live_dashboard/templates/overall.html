@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container section-padding" >  
+    <table class="table">
+        <thread>
+            <tr class="header table-light">
+                <th style="width:5%;">Rank</th>
+                <th style="width:25%;">First Name</th>
+                <th style="width:25%;">Last Name</th>
+                <th style="width:5%;">Gender</th>
+                <th style="width:15%;">Age Group</th>
+                <th style="width:15%;">Time</th>
+            </tr>
+        </thread>
+        <tbody id="levelTable">
+            {% for result in results %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{result.first_name}}</td>
+                    <td>{{result.last_name}}</td>
+                    <td>{{result.gender}}</td>
+                    <td>{{result.age_group}}</td>
+                    <td>{{result.minutes}}:{{result.seconds}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

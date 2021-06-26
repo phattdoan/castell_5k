@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <h2>Submit Your 5K Result</h2>
+        </div>
+        <form method = "POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type = "submit" value = "Submit">
+        </form>
+    </div>
+    
+{% endblock %}
