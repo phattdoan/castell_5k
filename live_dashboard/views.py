@@ -14,7 +14,7 @@ def submit(request):
         try:
             form = ResultForm(request.POST)
             newresult = form.save()
-            return redirect('home')
+            return redirect('overall')
         except ValueError:
             return render(request, 'submit.html', {'form':ResultForm(), 'error':'Bad data passed in. Try again.'})
 
