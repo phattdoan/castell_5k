@@ -25,4 +25,4 @@ urlpatterns = [
     path('submit/', views.submit, name='submit'),
     path('overall/',views.overall, name='overall'),
     path('male_18_24/',views.male_18_24, name='male_18_24'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

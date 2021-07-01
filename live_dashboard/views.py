@@ -12,8 +12,8 @@ def submit(request):
         return render(request, 'submit.html', {'form':ResultForm()})
     else:
         try:
-            form = ResultForm(request.POST)
-            newresult = form.save()
+            form = ResultForm(request.POST, request.FILES)
+            form.save()
             return redirect('overall')
         except ValueError:
             return render(request, 'submit.html', {'form':ResultForm(), 'error':'Bad data passed in. Try again.'})

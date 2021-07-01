@@ -56,7 +56,7 @@ class Result(models.Model):
     submission_date = models.DateTimeField(auto_now_add=True)
     date_completed = models.DateTimeField(null=True, blank=True)
     
-    run_photo = models.ImageField(upload_to='media', blank=True)
+    run_photo = models.ImageField(upload_to='', blank=True)
 
     def __str__(self):
         return self.first_name + self.last_name
