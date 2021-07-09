@@ -17,37 +17,22 @@ class Result(models.Model):
         default=F,
     )
 
-    age_under_18 = 'Under 18'
-    age_18_24 = '18-24'
-    age_25_30 = '25-30'
-    age_31_35 = '31-35'
-    age_36_40 = '36-40'
-    age_41_45 = '41-45'
-    age_46_50 = '46-50'
-    age_51_55 = '51-55'
-    age_56_60 = '56-60'
-    age_51_55 = '51-55'
-    age_61_65 = '61-65'
-    age_66_plus = '66+'
-
+    age_under_25 = 'Under 25'
+    age_26_35 = '26-35'
+    age_36_49 = '36-49'
+    age_50_over = '50+'
+    
     AGE_GROUP = [
-        (age_under_18, 'Under 18'),
-        (age_18_24, '18-24'),
-        (age_25_30, '25-30'),
-        (age_31_35, '31-35'),
-        (age_36_40, '36-40'),
-        (age_41_45, '41-45'),
-        (age_46_50, '46-50'),
-        (age_51_55, '51-55'),
-        (age_56_60, '56-60'),
-        (age_51_55, '51-55'),
-        (age_66_plus, '66+')
+        (age_under_25, 'Under 25'),
+        (age_26_35, '26-35'),
+        (age_36_49, '36-49'),
+        (age_50_over, '50+')
         ]
 
     age_group = models.CharField(
         max_length=50,
         choices=AGE_GROUP,
-        default=age_18_24,
+        default=age_26_35,
     )
     
     minutes = models.SmallIntegerField()
