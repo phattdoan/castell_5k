@@ -34,7 +34,7 @@ def male_26_35(request):
     return render(request, 'male_26_35.html',{'results':results})
 
 def male_36_49(request):
-    results = Result.objects.filter(age_group='36_49', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='36-49', gender='Male').order_by('minutes','seconds')
 
     return render(request, 'male_36_49.html',{'results':results})
 
@@ -54,7 +54,7 @@ def female_26_35(request):
     return render(request, 'female_26_35.html',{'results':results})
 
 def female_36_49(request):
-    results = Result.objects.filter(age_group='36_49', gender='Female').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='36-49', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_36_49.html',{'results':results})
 
