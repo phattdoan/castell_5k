@@ -81,7 +81,7 @@
                         <td>{{result.last_name}}</td>
                         <td>{{result.gender}}</td>
                         <td>{{result.age_group}}</td>
-                        <td>{{result.minutes}}:{{result.seconds}}</td>
+                        <td>{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
