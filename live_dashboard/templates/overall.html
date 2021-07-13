@@ -18,7 +18,7 @@
                         <li class="card shot-item zoom-icon">
                             <a href=""><img src="{{result.run_photo.url}}"" alt=""></a>
                             <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
-                            <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds}}</p>
+                            <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
                             <p class="text-center" style="font-size:18px">{{result.gender}}</p>
                             <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
                         </li>
@@ -27,7 +27,7 @@
                             <li class="card shot-item zoom-icon">
                                 <a href=""><img src="{% static 'live_dashboard/winner_1.jpg' %}"" alt=""></a>
                                 <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
-                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds}}</p>
+                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.gender}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
                             </li>
@@ -35,7 +35,7 @@
                             <li class="card shot-item zoom-icon">
                                 <a href=""><img src="{% static 'live_dashboard/winner_2.jpg' %}"" alt=""></a>
                                 <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
-                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds}}</p>
+                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.gender}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
                             </li>
@@ -43,7 +43,7 @@
                             <li class="card shot-item zoom-icon">
                                 <a href=""><img src="{% static 'live_dashboard/winner_3.jpg' %}"" alt=""></a>
                                 <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
-                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds}}</p>
+                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.gender}}</p>
                                 <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
                             </li>
