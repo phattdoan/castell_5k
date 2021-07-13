@@ -44,21 +44,21 @@ def male_50_above(request):
     return render(request, 'male_50_above.html',{'results':results})
 
 def female_under_25(request):
-    results = Result.objects.filter(age_group='under_25', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='under_25', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_under_25.html',{'results':results})
 
 def female_26_35(request):
-    results = Result.objects.filter(age_group='26-35', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='26-35', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_26_35.html',{'results':results})
 
 def female_36_49(request):
-    results = Result.objects.filter(age_group='36_49', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='36_49', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_36_49.html',{'results':results})
 
 def female_50_above(request):
-    results = Result.objects.filter(age_group='50+', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='50+', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_50_above.html',{'results':results})
