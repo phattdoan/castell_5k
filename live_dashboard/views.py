@@ -24,7 +24,7 @@ def overall(request):
     return render(request, 'overall.html',{'results':results})
 
 def male_under_25(request):
-    results = Result.objects.filter(age_group='under_25', gender='Male').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='Under 25', gender='Male').order_by('minutes','seconds')
 
     return render(request, 'male_under_25.html',{'results':results})
 
@@ -44,7 +44,7 @@ def male_50_above(request):
     return render(request, 'male_50_above.html',{'results':results})
 
 def female_under_25(request):
-    results = Result.objects.filter(age_group='under_25', gender='Female').order_by('minutes','seconds')
+    results = Result.objects.filter(age_group='Under 25', gender='Female').order_by('minutes','seconds')
 
     return render(request, 'female_under_25.html',{'results':results})
 
