@@ -2,6 +2,43 @@
 {% load static %}
 
 {% block content %}
+<br>
+
+<!-- Contract Section-->
+<section id="services" class="section-padding bg-gray">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Leaders</h2>
+        </div>
+        <ul class="card-wrapper">
+            {% for result in results %}
+                {% if forloop.counter <= 3 %}
+                    {% if result.run_photo %}
+                        <li class="card shot-item zoom-icon">
+                            <a href=""><img src="{{result.run_photo.url}}"" alt=""></a>
+                            <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
+                            <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
+                            <p class="text-center" style="font-size:18px">{{result.gender}}</p>
+                            <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
+                        </li>
+                    {% else %}
+                        {%if forloop.counter <= 3%}
+                            <li class="card shot-item zoom-icon">
+                                <a href=""><img src="{% static 'live_dashboard/share_your_run.png' %}"" alt=""></a>
+                                <p class="text-center" style="font-size:18px"><strong>{{result.first_name }} {{result.last_name }}</strong></p>
+                                <p class="text-center" style="font-size:18px">{{result.minutes}}:{{result.seconds|stringformat:"02d"}}</p>
+                                <p class="text-center" style="font-size:18px">{{result.gender}}</p>
+                                <p class="text-center" style="font-size:18px">{{result.age_group}}</p>
+                            </li>
+                        {%endif%}
+                    {%endif%}
+                {%endif%}            
+            {% endfor %}        
+        </ul>
+    </div>
+</section>
+
+<br>
 
 <div class="container section-padding" >  
     <table class="table">
